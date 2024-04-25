@@ -29,9 +29,12 @@ export class CdkStarterStack extends cdk.Stack {
       },
     });
 
-    new Bucket(this, "MyL2Bucket", {
+    const myL2Bucket = new Bucket(this, "MyL2Bucket", {
       lifecycleRules: [{ expiration: cdk.Duration.days(2) }],
     });
+    
+    new cdk.CfnOutput(this, "MyL2BucketName", { value: myL2Bucket.bucketName });
+    new cdk.CfnOutput(this, "MyL2BucketArn", { value: myL2Bucket.bucketArn });
 
     new L3Bucket(this, "MyL3Bucket", 3);
   }
