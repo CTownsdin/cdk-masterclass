@@ -29,6 +29,8 @@ export class CdkStarterStack extends cdk.Stack {
       },
     });
 
+    // This is for supplying parameters at deploy time, like:
+    // $ cdk deploy --parameters duration=9
     const duration = new cdk.CfnParameter(this, 'duration', {
       default: 6, 
       minValue: 1,
