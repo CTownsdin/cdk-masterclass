@@ -2,7 +2,12 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { CdkStarterStack } from '../lib/cdk-starter-stack';
+import { PhotosStack } from '../lib/PhotosStack';
 
 const app = new cdk.App();
 
-new CdkStarterStack(app, 'CdkStarterStack');
+// This is the name of the stack, and the name to look for when doing things like:
+// $ cdk destory CdkStarterStack
+// new CdkStarterStack(app, 'CdkStarterStack');
+
+new PhotosStack(app, 'PhotosStack');
