@@ -15,4 +15,12 @@ CloudFormation Intrinsic functions
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html
 Use intrinsic functions in your templates to assign values to properties that are not available until runtime.
 
-new
+Ref - example
+
+MyEIP:
+  Type: "AWS::EC2::EIP"
+  Properties:
+    InstanceId: !Ref MyEC2Instance
+
+
+
