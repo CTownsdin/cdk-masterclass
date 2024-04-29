@@ -12,4 +12,4 @@ const app = new cdk.App();
 // new CdkStarterStack(app, 'CdkStarterStack');
 
 new PhotosStack(app, 'PhotosStack');
-new PhotosHandlerStack(app, 'PhotosStack');
+new PhotosHandlerStack(app, 'PhotosHandlerStack');
