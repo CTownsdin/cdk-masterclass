@@ -16,5 +16,6 @@ export class PhotosStack extends Stack {
 
   private initSuffix() {
     const shortStackId = Fn.select(2, Fn.split('/', this.stackId))
+    this.stackSuffix = Fn.select(2, Fn.split('-', shortStackId))
   }
 }
