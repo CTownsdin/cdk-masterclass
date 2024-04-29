@@ -1,0 +1,18 @@
+CDK commands:
+
+cdk init app --language typescrupt
+cdk bootstrap
+cdk synth
+cdk deploy
+cdk list
+cdk diff
+// make sure to call this before you go to prod to see the diff
+cdk doctor
+// view env vars, and any problems
+cdk destroy <stackName>
+
+CloudFormation Intrinsic functions
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html
+Use intrinsic functions in your templates to assign values to properties that are not available until runtime.
+
+new
