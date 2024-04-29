@@ -9,13 +9,15 @@ export class PhotosStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const myBucket = new Bucket(this, 'PhotosBucket', {
-      bucketName: 'photosbucket-9384hdkfgh'
+    this.initSuffix();
+
+    new Bucket(this, 'PhotosBucket', {
+      bucketName: `photosbucket-${this.stackSuffix}`
     });
   }
 
   private initSuffix() {
     const shortStackId = Fn.select(2, Fn.split('/', this.stackId))
-    this.stackSuffix = Fn.select(2, Fn.split('-', shortStackId))
+    this.stackSuffix = Fn.select(4, Fn.split('-', shortStackId))
   }
 }
