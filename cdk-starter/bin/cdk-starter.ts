@@ -3,7 +3,7 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 // import { CdkStarterStack } from '../lib/cdk-starter-stack';
 import { PhotosStack } from '../lib/PhotosStack';
-import { PhotosHandlerStack } from '../lib/PhotosHandlerStack';
+import { PhotosStackHandler } from '../lib/PhotosStackHandler';
 
 const app = new cdk.App();
 
@@ -11,5 +11,9 @@ const app = new cdk.App();
 // $ cdk destory CdkStarterStack
 // new CdkStarterStack(app, 'CdkStarterStack');
 
+
+// When doing $ cdk deploy --all it will not work if there are references in the stack that don't exist yet.
+// So the first time, you'll need to cdk deploy PhotosStack, thereafter, cdk deploy all works bc ref exists then.
+
 new PhotosStack(app, 'PhotosStack');
-new PhotosHandlerStack(app, 'PhotosHandlerStack');
+new PhotosStackHandler(app, 'PhotosHandlerStack');
