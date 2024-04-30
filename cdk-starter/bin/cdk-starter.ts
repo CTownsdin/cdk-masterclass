@@ -7,9 +7,11 @@ import { PhotosHandlerStack } from '../lib/PhotosHandlerStack';
 
 const app = new cdk.App();
 
+// s3 bucket
 const photosStack = new PhotosStack(app, 'PhotosStack');
 
 // the lambda
 new PhotosHandlerStack(app, 'PhotosHandlerStack', {
   targetBucketArn: photosStack.photosBucketArn
 });
+
