@@ -1,9 +1,8 @@
 import { IAspect } from "aws-cdk-lib";
+import { CfnBucket } from "aws-cdk-lib/aws-s3";
 import { IConstruct } from "constructs";
 
-
 export class BucketTagger implements IAspect {
-  
   private key: string;
   private value: string;
 
@@ -13,6 +12,10 @@ export class BucketTagger implements IAspect {
   }
 
   visit(node: IConstruct): void {
-    throw new Error("Method not implemented.");
+    console.log("visiting: " + node.node.id);
+    
+    if (node instanceof CfnBucket) {
+      node.tags.setTag(this.key, this.value);
+    }
   }
 }
