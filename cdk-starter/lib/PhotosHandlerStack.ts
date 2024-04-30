@@ -2,13 +2,14 @@ import { Construct } from "constructs";
 import { Fn, Stack, StackProps } from "aws-cdk-lib";
 import { Code, Function as LambdaFunction, Runtime } from "aws-cdk-lib/aws-lambda";
 
-export class PhotosHandlerStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
-    super(scope, id, props);
 
-    // The intrinsic function Fn::ImportValue returns the value of an output exported by another stack.
-    // You typically use this function to create cross-stack references.
-    const targetBucket = Fn.importValue("photos-bucket");
+interface PHSProps extends StackProps { 
+  targetBucketArn: string;
+}
+
+export class PhotosHandlerStack extends Stack {
+  constructor(scope: Construct, id: string, props: PHSProps) {
+    super(scope, id, props);
 
     new LambdaFunction(this, "PhotosHandler", {
       runtime: Runtime.NODEJS_18_X,
@@ -19,7 +20,7 @@ export class PhotosHandlerStack extends Stack {
         };
       `),
       environment: {
-        TARGET_BUCKET: targetBucket,
+        TARGET_BUCKET: props.targetBucketArn,
       },
     });
   }
