@@ -3,7 +3,7 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 // import { CdkStarterStack } from '../lib/cdk-starter-stack';
 import { PhotosStack } from '../lib/PhotosStack';
-import { PhotosStackHandler } from '../lib/PhotosStackHandler';
+import { PhotosHandlerStack } from '../lib/PhotosHandlerStack';
 
 const app = new cdk.App();
 
@@ -16,4 +16,4 @@ const app = new cdk.App();
 // So the first time, you'll need to cdk deploy PhotosStack, thereafter, cdk deploy all works bc ref exists then.
 
 new PhotosStack(app, 'PhotosStack');
-new PhotosStackHandler(app, 'PhotosHandlerStack');
+new PhotosHandlerStack(app, 'PhotosHandlerStack');
