@@ -22,5 +22,17 @@ MyEIP:
   Properties:
     InstanceId: !Ref MyEC2Instance
 
+TODO:
+CONTINUE HERE: 
+Coding thru the Udemy course, and pushing commits for github.com/ctownsdin for fun.
+https://www.udemy.com/course/aws-typescript-cdk-serverless-react/learn/lecture/37562864#overview
+
+TODO:
+CONTINUE HERE:
+Reading/Skimming the AWS Docs
+https://docs.aws.amazon.com/cdk/v2/guide/constructs.html
 
 
+cdk-nag
+https://github.com/cdklabs/cdk-nag
+is a cdk linter implemented as an aspect which can enforce best practices like hippa and pci compliance rules
