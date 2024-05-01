@@ -22,6 +22,20 @@ MyEIP:
   Properties:
     InstanceId: !Ref MyEC2Instance
 
+
+Init a CDK project from scratch:
+ - create folder
+ - npm init -y
+ - install dependencies
+ - create Launcher.ts file
+ - create empty stack
+ - create cdk.json file
+
+
+cdk-nag
+https://github.com/cdklabs/cdk-nag
+is a cdk linter implemented as an aspect which can enforce best practices like hippa and pci compliance rules
+
 TODO:
 CONTINUE HERE: 
 Coding thru the Udemy course, and pushing commits for github.com/ctownsdin for fun.
@@ -31,8 +45,3 @@ TODO:
 CONTINUE HERE:
 Reading/Skimming the AWS Docs
 https://docs.aws.amazon.com/cdk/v2/guide/constructs.html
-
-
-cdk-nag
-https://github.com/cdklabs/cdk-nag
-is a cdk linter implemented as an aspect which can enforce best practices like hippa and pci compliance rules
