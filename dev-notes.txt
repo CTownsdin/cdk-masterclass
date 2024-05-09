@@ -52,4 +52,5 @@ https://docs.aws.amazon.com/cdk/v2/guide/constructs.html
 
 space-finder api routes:
 https://de4iptuqxa.execute-api.us-west-2.amazonaws.com/prod/spaces
+--> "Hello from space-finder lambda."
 
