@@ -39,9 +39,17 @@ is a cdk linter implemented as an aspect which can enforce best practices like h
 TODO:
 CONTINUE HERE: 
 Coding thru the Udemy course, and pushing commits for github.com/ctownsdin for fun.
-https://www.udemy.com/course/aws-typescript-cdk-serverless-react/learn/lecture/37562864#overview
+https://www.udemy.com/course/aws-typescript-cdk-serverless-react/learn/lecture/27143718#overview
+https://www.udemy.com/course/aws-typescript-cdk-serverless-react/learn/lecture/27143718#overview
+  --- get the REST requests working.
 
 TODO:
 CONTINUE HERE:
 Reading/Skimming the AWS Docs
 https://docs.aws.amazon.com/cdk/v2/guide/constructs.html
+
+
+
+space-finder api routes:
+https://de4iptuqxa.execute-api.us-west-2.amazonaws.com/prod/spaces
+
